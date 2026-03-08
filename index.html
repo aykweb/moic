@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>千葉かくう美術館｜MUSEUM OF IMAGINARY, CHIBA</title>
+  <meta property="og:description" content="千葉かくう美術館（MOIC）は、戦後から現代にかけての国内外の美術動向を捉えることを目的に、約7,000点の作品を収蔵しています。">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="./images/favi_moic.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Stick&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body class="is-home">
+  <header id="js-header" class="site-header"></header>
+
+  <section class="hero">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./images/top-hero-slide01-mobile.jpg">
+            <source srcset="./images/top-hero-slide01-desktop@2x.jpg 2x, ./images/top-hero-slide01-desktop.jpg 1x">
+            <img src="./images/top-hero-slide01-desktop.jpg" width="1920" height="1080" alt="展示風景" loading="eager"
+              fetchpriority="high">
+          </picture>
+        </div>
+
+        <div class="swiper-slide">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./images/top-hero-slide02-mobile.jpg">
+            <source srcset="./images/top-hero-slide02-desktop@2x.jpg 2x, ./images/top-hero-slide02-desktop.jpg 1x">
+            <img src="./images/top-hero-slide02-desktop.jpg" width="1920" height="1080" alt="展示風景">
+          </picture>
+        </div>
+
+        <div class="swiper-slide">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./images/top-hero-slide03-mobile.jpg">
+            <source srcset="./images/top-hero-slide03-desktop@2x.jpg 2x, ./images/top-hero-slide03-desktop.jpg 1x">
+            <img src="./images/top-hero-slide03-desktop.jpg" width="1920" height="1080" alt="展示風景">
+          </picture>
+        </div>
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <main class="top-main">
+    <section class="top-about main-container js-fade">
+      <div class="top-about__image js-fade js-reveal">
+        <img src="./images/about.png">
+      </div>
+      <div class="top-about__content">
+        <h2 class="section-head">MOICについて</h2>
+        <div class="top-about__text">
+          <p>
+            千葉かくう美術館（MOIC）は、現代美術の発展と地域の振興を図り芸術文化の基盤を充実させることを目的として1999年12月に開館いたしました。
+          </p>
+          <p>
+            約7,000点の収蔵作品を活かして、現代美術の流れを概観できるコレクション展示や国際展をはじめとする特色ある企画展示など、絵画、彫刻、建築、デザイン等幅広く現代美術に関する展覧会を開催しています。
+          </p>
+          <p>
+            また、美術に関する情報提供、教育普及を目的としたワークショップや講演会等の美術を広める活動を行っています。
+          </p>
+        </div>
+        <a class="btn is-clickable" href="./collections.html">
+          <span class="btn-text">MOICについて詳しく知る</span>
+          <span class="btn-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="top-news js-fade">
+      <div class="main-container ">
+        <header>
+          <h2 class="section-head">MOICからのお知らせ</h2>
+          <a class="btn is-clickable" href="./news.html">
+            <span class="btn-text">お知らせ一覧</span>
+            <span class="btn-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+              </svg>
+            </span>
+          </a>
+        </header>
+        <ul class="top-news__list">
+          <li>
+            <article>
+              <span class="category-label">イベント</span>
+              <time datetime="2025-08-20">2025年8月20日</time>
+              <h3><a href="./post_ws-night2025.html" class="text-link">ナイトミュージアム特別企画「縁日ワークショップ」</a></h3>
+            </article>
+          </li>
+          <li>
+            <article>
+              <span class="category-label">お知らせ</span>
+              <time datetime="2025-08-02">2025年8月2日</time>
+              <h3>
+                <a href="./post_news250802.html" class="text-link">【重要】8月7日(木) 臨時休館のお知らせ</a>
+              </h3>
+            </article>
+          </li>
+          <li>
+            <article>
+              <span class="category-label">イベント</span>
+              <time datetime="2025-08-01">2025年8月1日</time>
+              <h3><a href="./post_night2025.html" class="text-link">「納涼ナイトミュージアム2025」</a></h3>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer id="js-footer" class="site-footer"></footer>
+</body>
+
+</html>
