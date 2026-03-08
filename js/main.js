@@ -39,8 +39,8 @@
 
   // header / footer を読み込んでから初期化
   Promise.all([
-    loadHTML('#js-header', '/parts/header.html'),
-    loadHTML('#js-footer', '/parts/footer.html'),
+    loadHTML('#js-header', '/moic/parts/header.html'),
+    loadHTML('#js-footer', '/moic/parts/footer.html'),
   ]).then(init);
 
 
@@ -52,7 +52,7 @@
     window.addEventListener(
       'scroll',
       () => {
-        // 20px以上スクロールしたら is-scrolled を付与
+        // 20px以上スクロールしたらクラスを付与
         header.classList.toggle('is-scrolled', window.scrollY > 20);
       },
       { passive: true }
@@ -77,7 +77,7 @@
       // ハンバーガーをクリックした時の状態を代入
       const isOpen = hamburger.classList.toggle('is-open');
 
-      // 他の要素も連動させる
+      // 他の要素を連動
       menu.classList.toggle('is-open', isOpen);
       document.body.classList.toggle('is-menu-open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen);
@@ -107,7 +107,7 @@
       }
     });
 
-    // メニュー内のリンクをクリックした時
+    // メニューのリンクをクリックした時
     menu.addEventListener('click', (e) => {
       const link = e.target.closest('a');
       if (!link) return;
@@ -173,12 +173,10 @@
 
     const hero = document.querySelector('.hero');
     const header = document.querySelector('.site-header');
-    const footer = document.querySelector('.site-footer');
 
-    // ヘッダーの高さ（IntersectionObserverの補正用）
+    // ヘッダーの高さ
     const headerHeight = header ? header.offsetHeight : 0;
 
-    // 表示／非表示を切り替える共通関数
     const toggle = (show) => {
       backToTop.classList.toggle('is-show', show);
     };
