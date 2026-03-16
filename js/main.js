@@ -28,7 +28,7 @@
      初期化まとめ
      ===================== */
   function init() {
-    initHamburger();     // ハンバーガーメニュー
+    initHamburger();     // ハンバーガー
     initSearch();        // 検索フォーム開閉
     initSwiper();        // Swiper
     initBackToTop();     // back-to-top
@@ -181,7 +181,7 @@
       backToTop.classList.toggle('is-show', show);
     };
 
-    /* --- トップページの場合 --- */
+    /* --- トップページ --- */
     if (hero) {
       // トップページ：heroが画面外に出たら表示
       new IntersectionObserver(
@@ -189,13 +189,14 @@
         { rootMargin: `-${headerHeight}px 0px 0px 0px` }
       ).observe(hero);
     } else {
+
       // トップ以外のページ：スマホもPCも「スクロール量」で判定
       const showOnScroll = () => {
         // 200px以上スクロールしたら表示
         toggle(window.scrollY > 200);
       };
       window.addEventListener('scroll', showOnScroll);
-      showOnScroll(); // 初期状態のチェック
+      showOnScroll(); // 初期状態チェック
     }
 
     // クリックでトップに戻る
@@ -239,7 +240,7 @@
        ===================== */
   function initYear() {
     const yearEl = document.querySelector('#copyright');
-    const currentYear =  new Date().getFullYear();
+    const currentYear = new Date().getFullYear();
 
     if (yearEl) {
       yearEl.textContent = currentYear;
