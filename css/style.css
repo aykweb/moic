@@ -676,6 +676,7 @@ p {
   backdrop-filter: blur(10px);
   display: grid;
   place-items: center;
+  padding: 6rem;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s;
@@ -696,7 +697,7 @@ p {
 }
 
 .sp-global-nav li+li {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .sp-global-nav a {
@@ -1494,8 +1495,9 @@ main.inner-main {
 }
 
 .news-post__header h2 {
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
   margin-top: 1rem;
+  line-height: var(--lh-tight);
 }
 
 .news-post__img {
