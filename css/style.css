@@ -948,6 +948,11 @@ main.inner-main {
 .top-news__list li {
   border-bottom: 0.125rem solid var(--c-separator);
   padding-bottom: 0.875rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 8rem 1fr;
+    padding-bottom: 0.75rem;
+  }
 }
 
 .top-news__list li+li {
@@ -963,6 +968,7 @@ main.inner-main {
 
   @media (max-width: 768px) {
     grid-template-columns: 8rem 1fr;
+    padding: 0 0;
   }
 
   @media (max-width: 540px) {
@@ -988,6 +994,10 @@ main.inner-main {
 .top-news__list .text-link {
   font-size: var(--fs-base);
   white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: var(--fs-sm);
+  }
 
   @media (max-width: 540px) {
     white-space: normal;
@@ -1328,6 +1338,7 @@ main.inner-main {
   font-size: 1.25rem;
 
   @media (max-width: 768px) {
+    font-size: 1.25rem;
     width: 100%;
     white-space: nowrap;
     order: 2;
