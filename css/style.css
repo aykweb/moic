@@ -229,8 +229,8 @@ p {
   transition: transform 0.15s;
 }
 
-.is-clickable:active {
-  @media (hover: none) {
+@media (hover: none) {
+  .is-clickable:active {
     transform: scale(0.96);
   }
 }
@@ -950,7 +950,6 @@ main.inner-main {
   padding-bottom: 0.875rem;
 
   @media (max-width: 768px) {
-    grid-template-columns: 8rem 1fr;
     padding-bottom: 0.75rem;
   }
 }
@@ -1523,7 +1522,7 @@ main.inner-main {
 }
 
 .news-post__body a.text-link {
-  display: inline-flex;
+  display: inline;
   padding-inline: 0.1em;
 }
 
