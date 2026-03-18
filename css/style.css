@@ -660,7 +660,6 @@ p {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-
 .sp-global-nav {
   z-index: 200;
   position: fixed;
@@ -669,7 +668,7 @@ p {
   backdrop-filter: blur(10px);
   display: grid;
   place-items: center;
-  padding: 6rem;
+  padding: 3rem;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s;
