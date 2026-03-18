@@ -574,7 +574,6 @@ p {
   border: none;
   cursor: pointer;
   z-index: 110;
-
   transition: background 0.3s, color 0.3s;
 
   @media (min-width: 768px) {
@@ -603,12 +602,6 @@ p {
   width: 100%;
   color: var(--c-black);
   transition: color 0.3s;
-}
-
-@media (hover: hover) {
-  .hamburger:hover::after {
-    color: currentColor;
-  }
 }
 
 /* 待機（三） */
