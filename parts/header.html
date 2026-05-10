@@ -8,9 +8,9 @@
           <button class="search-toggle is-clickable" aria-expanded="false" type="button">
             <i class="bi bi-search"></i>
           </button>
-          <form class="search-form" role="search">
+          <form class="search-form" role="search" action="search.html" method="get">
             <label class="visually-hidden" for="site-search">サイト内を検索</label>
-            <input id="site-search" type="search" placeholder="サイト内検索" />
+            <input id="site-search" type="text" name="q" placeholder="サイト内検索" />
           </form>
         </li>
       </ul>
@@ -46,7 +46,7 @@
       </a>
     </h1>
 
-    <nav class="global-nav" aria-label="グローバルナビゲーション">
+    <nav class="global-nav" aria-label="メインナビゲーション">
       <ul class="pc-menu">
         <li><a href="/moic/guide.html"><span>ご利用案内</span></a></li>
         <li><a href="/moic/exhibitions.html"><span>展覧会</span></a></li>
@@ -57,7 +57,7 @@
   </div>
 </div>
 
-<nav class="sp-global-nav" aria-hidden="true">
+<nav class="sp-global-nav" aria-hidden="true" aria-label="モバイルナビゲーション"></nav>
   <ul>
     <li><a href="/moic/guide.html">ご利用案内</a></li>
     <li><a href="/moic/exhibitions.html">展覧会</a></li>

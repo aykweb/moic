@@ -205,7 +205,7 @@
     });
   }
   /* =====================
-     フェードアップ 制御
+     フェードイン 制御
      ===================== */
   function initFade() {
     const fadeTargets = document.querySelectorAll('.js-fade');
@@ -215,18 +215,27 @@
           if (entry.target.classList.contains('js-reveal')) {
             entry.target.animate(
               { opacity: [0, 1], clipPath: ['inset(0 100% 0 0)', 'inset(0 0 0 0)'], },
-              { duration: 600, delay: 300, fill: 'forwards', easing: 'ease' });
+              { 
+              duration: 800,
+              delay: 100,
+              fill: 'forwards', 
+              easing: 'cubic-bezier(0.25, 1, 0.5, 1)'
+            });
           } else {
             entry.target.animate(
               { opacity: [0, 1], translate: ['0 1rem', 0], },
-              { duration: 300, fill: 'forwards', easing: 'ease' });
+              { 
+              duration: 500,
+              fill: 'forwards', 
+              easing: 'ease-out' 
+            });
           }
 
           observer.unobserve(entry.target);
         }
       });
     }, {
-      rootMargin: '0px 0px -20% 0px',
+      rootMargin: '0px 0px -10% 0px',
       threshold: 0
     });
 
