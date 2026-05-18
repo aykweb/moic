@@ -93,7 +93,7 @@
             },
             {
               duration: 400,
-              delay: 150 * index,
+              delay: 80 * index,
               fill: 'forwards',
               easing: 'ease'
             }
