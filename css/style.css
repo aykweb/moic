@@ -833,19 +833,26 @@ main.inner-main {
 }
 
 .info-columns {
-  display: grid;
-  grid-template-columns: minmax(max-content, 6rem) 1fr;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 1.5rem;
   padding-inline: 0.5rem;
   font-weight: var(--fw-regular);
 }
 
-.info-columns dt {
-  white-space: nowrap;
+.info-columns,
+.info-columns p {
+  line-height: var(--lh-tight);
+  max-inline-size: none;
 }
 
-.info-columns p+p {
-  margin-top: 0.5rem;
+.info-columns dt {
+  white-space: nowrap;
+  width: 24%;
+}
+
+.info-columns dd {
+  width: 76%;
 }
 
 /*------------------------------------
