@@ -41,7 +41,9 @@
   Promise.all([
     loadHTML('#js-header', '/moic/parts/header.html'),
     loadHTML('#js-footer', '/moic/parts/footer.html'),
-  ]).then(init);
+  ]).then(init).catch((err) => {
+  console.error(err);
+});;
 
 
   // スクロール判定
