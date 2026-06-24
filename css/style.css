@@ -250,6 +250,10 @@ p {
   white-space: nowrap;
 }
 
+.bi {
+  letter-spacing: normal;
+}
+
 /*------------------------------------
 header
 ------------------------------------*/
@@ -1566,7 +1570,6 @@ news-post
 
 .news-post__social {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 0 0.5rem;
   margin-top: var(--gap-xs);
@@ -1576,9 +1579,9 @@ news-post
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.4rem;
-  width: 24px;
-  height: 24px;
+ width: 2rem;
+ height: 2rem;
+  border-radius: 0.375em;
   background: var(--c-black);
   transition: background 0.3s, transform 0.3s;
 }
@@ -1591,7 +1594,7 @@ news-post
 }
 
 .news-post__social .bi {
-  font-size: var(--fs-base);
+  font-size: 1.25rem;
   line-height: 1;
   color: var(--c-white);
   transition: color 0.3s;
