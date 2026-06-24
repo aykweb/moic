@@ -17,7 +17,7 @@ https://aykweb.github.io/moic/
 - **MAMP**
 - **macOS**
 - **VS Code**
-- **GitHub** : 履歴管理
+- **GitHub** : 履歴管理, GitHub Pagesでのサイト公開
 
 ## 制作のポイント
 - **アクセシビリティの確保**  
