@@ -673,14 +673,8 @@ header
   }
 }
 
-.sp-global-nav.is-open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .sp-global-nav li {
   opacity: 0;
-  transform: translateY(16px);
 }
 
 .sp-global-nav li+li {
@@ -691,7 +685,18 @@ header
   display: inline-block;
   min-height: 44px;
   font-size: var(--fs-lg);
-  transition: transform 0.3s;
+}
+
+/* 表示状態 */
+.sp-global-nav.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  /* transition: opacity 0.35s ease-out; */
+}
+
+.sp-global-nav.is-open li {
+  color: var(--c-white);
+  /* transition: transform var(--t); */
 }
 
 /*------------------------------------
