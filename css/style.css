@@ -699,21 +699,16 @@ hero
 .hero {
   width: 100%;
   aspect-ratio: 16 / 9;
-  max-height: calc(92vh - var(--h-header));
+  max-height: calc(90vh - var(--h-header));
 
   @media (max-width: 768px) {
     aspect-ratio: 3 / 2;
   }
 }
 
-@media (hover: hover) {
-  .hero:hover .swiper-pagination {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-}
-
+/*------------------
+Swiper
+------------------*/
 .hero .swiper {
   width: 100%;
   height: 100%;
@@ -727,51 +722,37 @@ hero
   object-fit: cover;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  /* 待機状態 */
-  color: var(--c-white);
-  z-index: 10;
-  opacity: 0;
-  pointer-events: auto;
-  transition:
-    opacity var(--t);
-}
 
-.swiper-button-next:is(:hover, :active),
-.swiper-button-prev:is(:hover, :active) {
-  opacity: 1;
-}
-
-.swiper-pagination {
+.hero .swiper-pagination {
+  bottom: -1.75rem;
   display: flex;
   justify-content: center;
-  gap: 0 1rem;
-  padding-block: 0.75rem;
+  gap: 0 1em;
+
+  @media (max-width: 768px) {
+  bottom: -1.5rem;
+  }
 }
 
-.swiper-pagination-bullet::before {
+.hero .swiper-pagination-bullet::before {
   content: '';
   position: absolute;
-  inset: -0.5rem;
+  inset: -0.25rem;
 }
 
-.swiper-pagination-bullet {
+.hero .swiper-pagination-bullet {
   position: relative;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background: var(--c-white);
-
-  opacity: 0.5;
-  transition: opacity var(--t);
+  color: var(--c-black);
   pointer-events: auto;
 }
 
 /* 現在地 */
-.swiper-pagination-bullet-active {
+.hero .swiper-pagination-bullet-active {
+  background: var(--c-black);
   opacity: 1;
-  background: var(--c-white);
 }
 
 /*------------------------------------
