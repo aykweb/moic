@@ -32,6 +32,11 @@ img {
   --h-glo-nav: 5.75rem;
   --h-header: calc(var(--h-sub-nav) + var(--h-glo-nav));
   --side-padding: 2rem;
+
+  @media (max-width: 768px) {
+    --side-padding: 1rem;
+  }
+
   --ham-size: 3.5rem;
 
   --gap-xs: 2rem;
@@ -463,6 +468,7 @@ header
 
 .site-title a {
   display: block;
+  padding-block: 0.125rem;
   height: 100%;
   transition: opacity var(--t);
 }
@@ -511,12 +517,6 @@ header
   display: inline-block;
   font-size: var(--fs-base);
   letter-spacing: var(--ls-wide);
-
-  text-shadow:
-    0.25px 0.25px 0 var(--c-separator),
-    -0.25px 0.25px 0 var(--c-separator),
-    0.25px -0.25px 0 var(--c-separator),
-    -0.25px -0.25px 0 var(--c-separator);
 }
 
 .pc-menu a span::after {
@@ -555,20 +555,12 @@ header
   width: var(--ham-size);
   height: var(--ham-size);
   border: none;
-  font-size: 16px;
   background: transparent;
+  color: var(--c-black);
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
 
   @media (min-width: 768px) {
     display: none;
-  }
-}
-
-@media (hover: hover) {
-  .hamburger:hover {
-    background: var(--c-hover-bg);
-    color: var(--c-teal);
   }
 }
 
@@ -577,16 +569,15 @@ header
   display: block;
   position: absolute;
   left: 50%;
-  bottom: 5%;
-  width: 100%;
+  bottom: 3px;
   transform: translateX(-50%);
-  content: "メニュー";
   color: var(--c-black);
-  font-size: 0.6em;
+  width: 100%;
+  font-size: 0.675rem;
+  text-align: center;
   font-weight: var(--fw-bold);
   letter-spacing: var(--ls-tight);
   background: none;
-  transition: color 0.3s;
 }
 
 /* 待機状態（三） */
@@ -596,7 +587,8 @@ header
   top: 40%;
   left: 50%;
   width: 64%;
-  height: 0.125em;
+  height: 2px;
+  border-radius: 8px;
   transform-origin: center center;
   background: var(--c-black);
 
@@ -855,24 +847,23 @@ main.inner-main {
 .info-columns {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 2.25em;
   padding-inline: 0.5rem;
   font-weight: var(--fw-regular);
-}
 
-.info-columns,
-.info-columns p {
-  line-height: var(--lh-tight);
-  max-inline-size: none;
+  @media (max-width: 768px) {
+    gap: 0 1em;
+  }
 }
 
 .info-columns dt {
+  font-weight: var(--fw-medium);
   white-space: nowrap;
-  width: 24%;
+  width: 25%;
 }
 
 .info-columns dd {
-  width: 76%;
+  flex: 1;
 }
 
 /*------------------------------------
@@ -1277,8 +1268,7 @@ access-page
 }
 
 .access-accessibility p {
-  max-inline-size: none;
-  padding-inline: 1rem;
+  padding-inline: 0.5rem;
   margin-top: 1rem;
   font-weight: var(--fw-regular);
 }
@@ -1312,7 +1302,7 @@ news-page
 
 @media (hover: hover) {
   .news-list a:hover {
-    opacity: 0.8;
+    opacity: 0.65;
   }
 }
 
