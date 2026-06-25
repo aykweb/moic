@@ -52,7 +52,7 @@ img {
   }
 
   --c-white: #FFFFFF;
-  --c-gray-100: #f5f9f9;
+  --c-gray-100: #EEF2F3;
   --c-gray-600: #666666;
   --c-black: #1A1A1A;
   --c-teal: #008484;
@@ -104,6 +104,7 @@ body {
   font-weight: var(--fw-medium);
   letter-spacing: var(--ls-wide);
   line-height: var(--lh-base);
+  background: var(--c-white);
 }
 
 /* JS付与クラス */
