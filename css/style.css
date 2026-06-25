@@ -571,8 +571,8 @@ header
   left: 50%;
   bottom: 3px;
   transform: translateX(-50%);
-  color: var(--c-black);
   width: 100%;
+  color: currentColor;
   font-size: 0.675rem;
   text-align: center;
   font-weight: var(--fw-bold);
@@ -590,7 +590,7 @@ header
   height: 2px;
   border-radius: 8px;
   transform-origin: center center;
-  background: var(--c-black);
+  background: currentColor;
 
   /* メニュー収納時 */
   ;
@@ -614,6 +614,7 @@ header
 .hamburger.is-open {
   position: absolute;
   z-index: 210;
+  color: var(--c-white);
 }
 
 .hamburger.is-open::after {
@@ -653,10 +654,11 @@ header
   inset: 0;
   place-items: center;
   padding: 0 3rem;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* 文字色と背景を同化 */
+  /* フェード時のちらつき防止 */
+  background: var(--c-black);
   opacity: 0;
+  color: var(--c-black);
   pointer-events: none;
   transition: opacity var(--t) ease-out;
 
