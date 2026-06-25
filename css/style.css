@@ -47,7 +47,7 @@ img {
   }
 
   --c-white: #FFFFFF;
-  --c-gray-100: #F5F9F9;
+  --c-gray-100: #f5f9f9;
   --c-gray-600: #666666;
   --c-black: #1A1A1A;
   --c-teal: #008484;
@@ -72,6 +72,9 @@ img {
   --lh-tight: 1.5;
   --lh-base: 1.6;
   --lh-loose: 1.8;
+
+  /* アニメーション */
+  --t: 0.3s;
 }
 
 html {
@@ -169,7 +172,7 @@ p {
   align-items: center;
   color: var(--c-teal);
   font-weight: var(--fw-medium);
-  transition: color 0.3s, opacity 0.3s;
+  transition: color var(--t), opacity var(--t);
 }
 
 @media (hover: hover) {
@@ -189,7 +192,7 @@ p {
   font-size: var(--fs-base);
   color: var(--c-white);
   background: var(--c-black);
-  transition: background 0.3s ease-in-out;
+  transition: background var(--t) ease-in-out;
 }
 
 @media (hover: hover) {
@@ -218,7 +221,7 @@ p {
   justify-content: flex-end;
   flex-shrink: 0;
   color: inherit;
-  transition: transform 0.3s;
+  transition: transform var(--t);
 }
 
 .btn-arrow svg {
@@ -264,8 +267,8 @@ header
   height: calc(var(--h-sub-nav) + var(--h-glo-nav));
   top: 0;
   left: 0;
-  transition: background 0.3s,
-    box-shadow 0.3s;
+  transition: background var(--t),
+    box-shadow var(--t);
 }
 
 .site-header.is-scrolled {
@@ -279,7 +282,7 @@ header
 }
 
 /*------------------
-sub-nav
+サブメニュー
 ------------------*/
 .sub-nav {
   display: flex;
@@ -328,7 +331,7 @@ sub-nav
   padding-inline: 0.5em;
   min-height: 44px;
   white-space: nowrap;
-  transition: background 0.3s;
+  transition: background var(--t);
 }
 
 @media (hover: hover) {
@@ -351,13 +354,13 @@ sub-nav
   border: none;
   background: none;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background var(--t);
 }
 
 .sub-nav__search i {
   font-size: var(--fs-md);
   color: var(--c-black);
-  transition: background 0.3s;
+  transition: background var(--t);
 }
 
 @media (hover: hover) {
@@ -370,7 +373,7 @@ sub-nav
 .search-form {
   width: 0;
   overflow: hidden;
-  transition: width 0.3s;
+  transition: width var(--t);
 }
 
 .search-form input {
@@ -379,7 +382,7 @@ sub-nav
   border: 1.6px solid var(--c-separator);
   border-radius: 0.375em;
   font-size: 0.9rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color var(--t), box-shadow var(--t);
 }
 
 .search-form input:focus {
@@ -413,13 +416,13 @@ sub-nav
   padding-inline: 0.5rem;
   background: var(--c-black);
   color: var(--c-white);
-  transition: background 0.3s ease-in-out, transform 0.3s;
+  transition: background var(--t) ease-in-out, transform var(--t);
 }
 
 .sub-nav__social i {
   font-size: var(--fs-lg);
   line-height: 1;
-  transition: transform 0.3s;
+  transition: transform var(--t);
 }
 
 @media (hover: hover) {
@@ -433,13 +436,12 @@ sub-nav
 }
 
 /*------------------
-main-nav
+メインメニュー
 ------------------*/
 .header-main {
   border-bottom: 1px solid var(--c-separator);
   height: var(--h-glo-nav);
   background: var(--c-white);
-  transition: padding 0.3s;
 }
 
 .header-main .container {
@@ -462,7 +464,7 @@ main-nav
 .site-title a {
   display: block;
   height: 100%;
-  transition: opacity 0.3s;
+  transition: opacity var(--t);
 }
 
 @media (hover: hover) {
@@ -482,7 +484,6 @@ main-nav
   object-fit: cover;
 }
 
-/* global-nav */
 .global-nav {
   width: 100%;
 }
@@ -528,7 +529,7 @@ main-nav
   transform-origin: center;
   transform: translateX(-50%) scaleX(0);
   content: "";
-  transition: transform 0.25s ease-out;
+  transition: transform var(--t) ease-out;
 }
 
 @media (hover: hover) {
@@ -542,9 +543,8 @@ main-nav
 }
 
 /*------------------
-sp-nav
+ハンバーガーボタン
 ------------------*/
-/* ハンバーガーボタン */
 .hamburger {
   z-index: 110;
   display: block;
@@ -573,6 +573,7 @@ sp-nav
 }
 
 .hamburger::after {
+  content: "メニュー";
   display: block;
   position: absolute;
   left: 50%;
@@ -588,7 +589,7 @@ sp-nav
   transition: color 0.3s;
 }
 
-/* 待機（三） */
+/* 待機状態（三） */
 .hamburger__bar {
   display: block;
   position: absolute;
@@ -598,7 +599,10 @@ sp-nav
   height: 0.125em;
   transform-origin: center center;
   background: var(--c-black);
-  transition: transform 0.25s, width 0.2s 0.2s;
+
+  /* メニュー収納時 */
+  ;
+  transition: transform var(--t) ease-out;
 }
 
 
@@ -614,7 +618,7 @@ sp-nav
   transform: translate(-50%, calc(-50% + 9px));
 }
 
-/* 開いた状態（×） */
+/* 表示状態（×） */
 .hamburger.is-open {
   position: absolute;
   z-index: 210;
@@ -626,7 +630,9 @@ sp-nav
 
 .hamburger.is-open .hamburger__bar {
   width: calc(50% * 1.35);
-  transition: transform 0.3s 0.2s, opacity 0.2s, width 0.5s linear;
+
+  /* メニュー展開時 */
+  transition: transform var(--t);
 }
 
 
@@ -644,7 +650,10 @@ sp-nav
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-
+/*------------------
+オーバーレイメニュー
+------------------*/
+/* 待機状態 */
 .sp-global-nav {
   display: grid;
   position: fixed;
@@ -657,7 +666,7 @@ sp-nav
   -webkit-backdrop-filter: blur(10px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s;
+  transition: opacity var(--t) ease-out;
 
   @media (min-width: 768px) {
     display: none;
@@ -727,7 +736,7 @@ hero
   opacity: 0;
   pointer-events: auto;
   transition:
-    opacity 0.25s;
+    opacity var(--t);
 }
 
 .swiper-button-next:is(:hover, :active),
@@ -756,7 +765,7 @@ hero
   background: var(--c-white);
 
   opacity: 0.5;
-  transition: opacity 0.25s;
+  transition: opacity var(--t);
   pointer-events: auto;
 }
 
@@ -1114,7 +1123,7 @@ footer
   justify-content: flex-start;
   align-items: center;
   min-height: 24px;
-  transition: opacity 0.3s;
+  transition: opacity var(--t);
 }
 
 @media (hover: hover) {
@@ -1293,6 +1302,7 @@ news-page
   align-items: center;
   flex-wrap: wrap;
   gap: 0 0.75rem;
+  transition: opacity var(--t);
 }
 
 @media (hover: hover) {
@@ -1357,7 +1367,7 @@ exhibitions-page & events-page
   grid-template-rows: auto auto;
   gap: 0 var(--gap-xs);
   background: var(--c-gray-100);
-  transition: background 0.3s, color 0.3s, transform 0.3s;
+  transition: background var(--t), color var(--t), transform var(--t);
 
   @media (max-width: 768px) {
     display: block;
@@ -1568,7 +1578,7 @@ news-post
   font-size: var(--fs-sm);
   line-height: 1;
   color: var(--c-black);
-  transition: border-color 0.3s;
+  transition: border-color var(--t);
 }
 
 .news-post__tag span::before {
@@ -1591,7 +1601,7 @@ news-post
   height: 2rem;
   border-radius: 0.375em;
   background: var(--c-black);
-  transition: background 0.3s, transform 0.3s;
+  transition: background var(--t), transform var(--t);
 }
 
 @media (hover: hover) {
@@ -1605,7 +1615,7 @@ news-post
   font-size: 1.25rem;
   line-height: 1;
   color: var(--c-white);
-  transition: color 0.3s;
+  transition: color var(--t);
 }
 
 /*------------------------------------
