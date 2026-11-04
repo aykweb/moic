@@ -43,7 +43,7 @@
     loadHTML('#js-footer', '/moic/parts/footer.html'),
   ]).then(init).catch((err) => {
   console.error(err);
-});;
+});
 
 
   // スクロール判定
